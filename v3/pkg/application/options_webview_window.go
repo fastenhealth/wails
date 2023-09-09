@@ -112,6 +112,10 @@ type WebviewWindowOptions struct {
 
 	// If true, the window's default context menu will be disabled (default false)
 	DefaultContextMenuDisabled bool
+
+	// EnableFraudulentWebsiteWarnings will enable warnings for fraudulent websites.
+	// Default: false
+	EnableFraudulentWebsiteWarnings bool
 }
 
 var WebviewWindowDefaults = &WebviewWindowOptions{
