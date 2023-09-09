@@ -141,7 +141,7 @@ func (d *AssetServer) AddPluginScript(pluginName string, script string) {
 
 func (d *AssetServer) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 	start := time.Now()
-	wrapped := &contentTypeSniffer{rw: rw}
+	wrapped := newContentTypeSniffer(rw)
 	d.serveHTTP(wrapped, req)
 	d.logger.Info(
 		"Asset Request:",
