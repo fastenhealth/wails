@@ -11,11 +11,11 @@ import (
 
 type SysoOptions struct {
 	Example  bool   `description:"Generate example manifest & info files"`
-	Manifest string `description:"The manifest file"`
-	Info     string `description:"The info.json file"`
-	Icon     string `description:"The icon file"`
-	Out      string `description:"The output filename for the syso file"`
-	Arch     string `description:"The target architecture"`
+	Manifest string `name:"manifest" description:"The manifest file"`
+	Info     string `name:"info" description:"The info.json file"`
+	Icon     string `name:"icon" description:"The icon file"`
+	Out      string `name:"out" description:"The output filename for the syso file"`
+	Arch     string `name:"arch" description:"The target architecture"`
 }
 
 func (i *SysoOptions) Default() *SysoOptions {
